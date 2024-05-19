@@ -1,0 +1,36 @@
+.planet-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.img-container {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  animation-timing-function: "linear";
+}
+
+.img-container > img::not(#sun) {
+  animation: spin 1s infinite;
+}
+
+img {
+  z-index: 1;
+}
+
+.circle {
+  border-radius: 100%;
+  border: 1px solid #dcdcdc12;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
