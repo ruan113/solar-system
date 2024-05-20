@@ -12,8 +12,6 @@ function App() {
   >(undefined);
 
   const onPlanetClicked = (props: OnPlanetClickProps) => {
-    console.log("oi");
-
     if (selectedPlanet?.planetName === props.planetName)
       return setSelectedPlanet(undefined);
     setSelectedPlanet(props);
